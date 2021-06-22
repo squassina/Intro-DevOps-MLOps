@@ -50,11 +50,11 @@ Mais informações:
 
 ## DevOps
 
-[O que é o DevOps?](https://azure.microsoft.com/overview/what-is-devops/)
+[O que é o DevOps?](https://azure.microsoft.com/overview/what-is-devops/)   
 [What is DevOps? A guide to common methods and misconceptions](https://github.blog/2020-10-07-devops-definition/)
 
 ## MLOps
 
-[MLflow](https://mlflow.org/)
-[Operações de machine learning (MLOps)](https://azure.microsoft.com/pt-br/services/machine-learning/mlops/)
+[MLflow](https://mlflow.org/)   
+[Operações de machine learning (MLOps)](https://azure.microsoft.com/pt-br/services/machine-learning/mlops/)   
 [O que é MLOps?](https://blog.nvidia.com.br/2020/09/08/o-que-e-mlops/)
