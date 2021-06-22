@@ -45,9 +45,16 @@ Mais informações:
 1. [criar repositório](https://docs.github.com/en/get-started/quickstart/create-a-repo)
 1. [_fork_ de repositórios](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 1. [alterar arquivos e fazer _commit_](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository)
-1. [ProGit](https://github.com/progit/progit2-pt-br)
+1. [ProGit (em português)](https://github.com/progit/progit2-pt-br)
 1. [ProGit para o Kindle](https://www.amazon.com.br/Pro-Git-English-Scott-Chacon-ebook/dp/B01ISNIKES/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=)
 
 ## DevOps
 
+[O que é o DevOps?](https://azure.microsoft.com/overview/what-is-devops/)
+[What is DevOps? A guide to common methods and misconceptions](https://github.blog/2020-10-07-devops-definition/)
+
 ## MLOps
+
+[MLflow](https://mlflow.org/)
+[Operações de machine learning (MLOps)](https://azure.microsoft.com/pt-br/services/machine-learning/mlops/)
+[O que é MLOps?](https://blog.nvidia.com.br/2020/09/08/o-que-e-mlops/)
