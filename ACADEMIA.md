@@ -51,4 +51,20 @@ que este código vai funcionar? Você pode responder: "por que ele testou no com
 de versão do R ou do Python, das versões das bibliotecas, se usa um sistema operacional X ou Y ou Z, uma avalanche de variáveis
 que começa a ficar difícil de controlar.
 
-Vamos usar o GitHub para fazer este trabalho mais complicado para nós? A idéia é usarmos o [GitHub Actions](https://github.com/features/actions)
+Vamos usar o GitHub para fazer este trabalho mais complicado para nós? A idéia é usarmos o [GitHub Actions](https://github.com/features/actions).
+
+## Transformando o código
+
+O GitHub Actions vai auxiliar na verificação do código, executando testes e re-treinando o modelo (em alguns casos). Porém
+muitas vezes usamos Notebooks do Jupyter (no caso do Python) ou arquivos R Markdown (para o R). Este tipo de arquivo causam
+algumas dificuldades quando queremos executá-los sem intervenção humana. Nestes casos, temos opções:
+
+- [Convertendo Jupyter Notebooks para Python](https://github.com/jupyter/nbconvert)
+- [Convertendo Rmd para R](https://bookdown.org/yihui/rmarkdown-cookbook/purl.html)
+
+Vamos utilizar estas ferramentas para fazer a conversão para nós antes de enviarmos o código para o GitHub, para que estes
+códigos possam ser revisados por outros e executados pelo GitHub Actions.
+
+Para Python existe [documentação](https://docs.github.com/en/actions/guides/building-and-testing-python).
+
+Para R existe um [projeto](https://github.com/r-lib/actions).
