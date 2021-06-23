@@ -47,6 +47,7 @@ Mais informações:
 1. [alterar arquivos e fazer _commit_](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository)
 1. [ProGit (em português)](https://github.com/progit/progit2-pt-br)
 1. [ProGit para o Kindle](https://www.amazon.com.br/Pro-Git-English-Scott-Chacon-ebook/dp/B01ISNIKES/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=)
+1. [RStudio + Git & GitHub](https://r-pkgs.org/git.html)
 
 ## DevOps
 
