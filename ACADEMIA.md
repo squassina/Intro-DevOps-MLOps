@@ -68,3 +68,13 @@ códigos possam ser revisados por outros e executados pelo GitHub Actions.
 Para Python existe [documentação](https://docs.github.com/en/actions/guides/building-and-testing-python).
 
 Para R existe um [projeto](https://github.com/r-lib/actions).
+
+## Renderizando arquivos R Markdown
+
+Quando fazemos trabalhos ou artigos e usamos R Markdown para mostrar texto, LaTeX e código em um arquivo só, que podemos
+executar e mostrar os resultados, não precisamos sempre enviar para o GitHub o arquivo final, seja qual for o formato.
+
+Para garantirmos que teremos sempre as mesmas versões do `.Rmd` e do arquivo a ser entregue podemos usar o GitHub actions
+para fazer a conversão, ou renderização do documento para nós. E usamos esta versão para entrega do trabalho.
+
+Um exemplo de _renderizador_ de `Rmd` pode ser encontrado na pasta [samples](samples/.github/workflows/rmarkdown.yml).
