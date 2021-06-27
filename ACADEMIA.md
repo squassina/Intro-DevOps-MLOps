@@ -71,7 +71,7 @@ mesmas versões, usamos este script que vai gerar um arquivo chamado `install_de
 
 São duas colunas: package e version.
 
-Este arquivo será lido e usamos o pacote `remotes` para fazer a instalação dos pacotes com suas versões usadas.
+Este arquivo será lido e usamos o pacote [`remotes`](https://remotes.r-lib.org/) para fazer a instalação dos pacotes com suas versões usadas.
 
 ## Transformando o código
 
