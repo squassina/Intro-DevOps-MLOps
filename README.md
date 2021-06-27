@@ -3,6 +3,9 @@
 O propósito deste repositório é servir de guia inicial de uso do GitHub e uma biblioteca de _links_ para documentos de DevOps
 e MLOps.
 
+Veja o guia que preparei para a [ACADEMIA](ACADEMIA.md) e os exemplos de [GitHub Actions](samples/.github/) que podem ser usados
+em projetos em Python, R e R Markdown.
+
 ## GitHub
 
 O GitHub possui uma documentação extensa de seu uso, então vou simplesmente listar os comandos na ordem que eles são necessários
