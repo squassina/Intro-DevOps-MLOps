@@ -53,6 +53,26 @@ que começa a ficar difícil de controlar.
 
 Vamos usar o GitHub para fazer este trabalho mais complicado para nós? A idéia é usarmos o [GitHub Actions](https://github.com/features/actions).
 
+### Dependências
+
+#### Python
+
+Para o Python, temos as opções de usar o arquivo `requirements.txt` ou o [poetry](https://python-poetry.org/).
+
+Como já é uma solução padrão, não vamos nos aprofundar neste assunto.
+
+#### R
+
+Para gestão das dependências usando o R temos um [script](utils/get_deps.R).
+
+Quando terminamos o script, temos todas as bibliotecas usadas carregadas. Para garantir que o script será executado com as
+mesmas versões, usamos este script que vai gerar um arquivo chamado `install_deps`. Este arquivo deve ser armazenado no diretório
+.github. Temos um exemplo em [samples](samples/.github/install_deps).
+
+São duas colunas: package e version.
+
+Este arquivo será lido e usamos o pacote `remotes` para fazer a instalação dos pacotes com suas versões usadas.
+
 ## Transformando o código
 
 O GitHub Actions vai auxiliar na verificação do código, executando testes e re-treinando o modelo (em alguns casos). Porém

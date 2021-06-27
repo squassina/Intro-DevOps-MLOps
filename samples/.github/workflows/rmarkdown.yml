@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - '**.Rmd'
-      
+
 jobs:
   render:
     name: Render Rmarkdown
@@ -22,13 +22,22 @@ jobs:
 
       - name: Install pandoc
         uses: r-lib/actions/setup-pandoc@v1
-        
+
       - name: Install TinyTeX
         uses: r-lib/actions/setup-tinytex@v1
 
       - name: Install packages
         run: |
           install.packages("rmarkdown")
+          install.packages("remotes")
+        shell: Rscript {0}
+
+      - name: Install dependencies
+        run: |
+          deps <- read.csv(".github/install_deps")
+          for (i in 1:length(deps)-1){
+            remotes::install_version(deps$package[i], versiom = deps$version[i])
+          }
         shell: Rscript {0}
 
       - name: Render Rmarkdown files
