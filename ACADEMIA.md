@@ -98,3 +98,10 @@ Para garantirmos que teremos sempre as mesmas versões do `.Rmd` e do arquivo a 
 para fazer a conversão, ou renderização do documento para nós. E usamos esta versão para entrega do trabalho.
 
 Um exemplo de _renderizador_ de `Rmd` pode ser encontrado na pasta [samples](samples/.github/workflows/rmarkdown.yml).
+
+## Convertendo Jupyter Notebooks
+
+Jupyter Notebooks são uma forma prática de montar experimentos e visualizar os resultados rapidamente.
+
+Para facilitar a entrega de um relatório que montado neste formato, um exemplo de _workflow_ que faz a conversão do notebook
+em HTML, PDF ou _script_ Python pode ser encontrado na pasta [samples](samples/.github/workflows/jupyternb.yml).
