@@ -1,0 +1,89 @@
+name: Render Jupyter Notebooks
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '**.ipynb'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.9]
+
+    steps:
+    
+    - name: Checkout
+      uses: actions/checkout@v2.3.4
+      with:
+        fetch-depth: 0
+          
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install pandoc
+      uses: r-lib/actions/setup-pandoc@v1
+
+    - name: Install TinyTeX
+      uses: r-lib/actions/setup-tinytex@v1
+      
+    - name: Install LaTeX dependencies
+      run: |
+        tlmgr update --all --self
+        tlmgr install tcolorbox
+        tlmgr install pgf
+        tlmgr install xcolor
+        tlmgr install environ
+        tlmgr install trimspaces
+        tlmgr install mathpazo
+        tlmgr install parskip
+        tlmgr install adjustbox
+        tlmgr install collectbox
+        tlmgr install eurosym
+        tlmgr install ucs
+        tlmgr install enumitem
+        tlmgr install ulem
+        tlmgr install jknapltx rsfs
+        tlmgr install titling
+        tlmgr install collection-fontsrecommended
+        tlmgr install oberdiek
+        tlmgr install caption
+        tlmgr install upquote
+        
+    - name: Install nbconvert
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install nbconvert ipython
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+
+    - name: List of notebooks to be converted
+      id: getnotebooks
+      run: |
+        echo "::set-output name=IPYNB_PATH::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '[.]ipynb$')"
+
+    - name: Converting notebook to html
+      run: |
+        jupyter nbconvert --to html ${{ steps.getnotebooks.outputs.IPYNB_PATH }}
+
+    - name: Converting notebook to PDF
+      run: |
+        jupyter nbconvert --to pdf ${{ steps.getnotebooks.outputs.IPYNB_PATH }}
+
+    - name: Converting notebook to Python script
+      run: |
+        jupyter nbconvert --to script ${{ steps.getnotebooks.outputs.IPYNB_PATH }}
+
+    - name: Commit results
+      run: |
+        git config --local user.name "$GITHUB_ACTOR"
+        git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
+        git add .
+        git commit -m 'Convert Jupyter notebooks' || echo "No changes to commit"
+        git push origin || echo "No changes to commit"
