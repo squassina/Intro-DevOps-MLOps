@@ -62,3 +62,7 @@ Mais informações:
 [MLflow](https://mlflow.org/)   
 [Operações de machine learning (MLOps)](https://azure.microsoft.com/pt-br/services/machine-learning/mlops/)   
 [O que é MLOps?](https://blog.nvidia.com.br/2020/09/08/o-que-e-mlops/)
+
+### Estrutura de pastas para um projeto de ML Ops
+
+[Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/)
