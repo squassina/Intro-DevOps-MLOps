@@ -27,7 +27,19 @@ separadas em branch. O comando é o seguinte:
 git checkout -b <nome_da_branch>
 ```
 
-Depois de criar, ou alterar, o código/documento que quer armazenar no GitHub, você vai fazer um [_commit_](https://docs.github.com/en/get-started/quickstart/github-glossary#commit):
+Depois de criar, ou alterar, o código/documento que quer armazenar no GitHub, você vai adicionar as alterações à sua _branch_:
+
+```bash
+git add <arquivos_alterados>
+```
+
+Uma opção, se você quiser adicionar todos os arquivos alterados é:
+
+```bash
+git add .
+```
+
+Daí você precisa fazer um [_commit_](https://docs.github.com/en/get-started/quickstart/github-glossary#commit):
 
 ```bash
 git commit -m "<mensagem_descrevendo_a_alteração>"
