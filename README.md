@@ -33,7 +33,7 @@ Depois de criar, ou alterar, o código/documento que quer armazenar no GitHub, v
 git add <arquivos_alterados>
 ```
 
-Uma opção, se você quiser adicionar todos os arquivos alterados é:
+Uma opção, se você quiser adicionar todos os arquivos alterados, é:
 
 ```bash
 git add .
